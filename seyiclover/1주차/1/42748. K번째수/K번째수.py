@@ -1,25 +1,5 @@
 def solution(array, commands):
     answer = []
-    for command in commands:
-        s = command[0]
-        e = command[1]
-        i = command[2]
-        tmp = array[s-1:e]
-        tmp.sort()
-        answer.append(tmp[i-1])
-    return answer
-
-
-
-
-
-
-
-
-
-
-def solution(array, commands):
-    answer = []
     
     for command in commands:
         # i, j, k 변수 할당
@@ -32,8 +12,6 @@ def solution(array, commands):
 
         # 정렬
         array_cut = sorted(array_cut)
-
-        # 정답
         answer.append(array_cut[k-1])
         
     return answer
